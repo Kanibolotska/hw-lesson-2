@@ -11,7 +11,7 @@
 //   }
 // Запишіть результат як число або null (якщо нічого не виведеться)
 
-const task1Answer = null; // <- ваша відповідь
+const task1Answer = 1; // <- ваша відповідь
 
 
 // Задача №2
@@ -19,10 +19,12 @@ const task1Answer = null; // <- ваша відповідь
 // Функція має повертати масив з 10 рядків
 
 function task2() {
-  const result = [];
-  // ваш код тут
+	const result = [];
+	for (let i = 1; i <= 10; i++) {
+		result.push(`Пункт №${i}`);
+	}
 
-  return result;
+	return result;
 }
 
 
@@ -41,7 +43,17 @@ const task3Answer = null; // <- ваша відповідь
 // Повертає рядок виду: "Результат ділення: 5"
 
 function divide(a, b) {
-  // ваш код тут
+	if (typeof a !== 'number' || typeof b !== 'number') {
+		return "Некоректні дані"
+	}
+
+	const result = a / b;
+	if (Number.isFinite(result)) {
+		return "Результат ділення: " + result;
+	}
+	else {
+		return "Результат ділення: помилка"
+	}
 }
 
 
@@ -52,10 +64,8 @@ function divide(a, b) {
 // Поверніть true, якщо число знайдено, інакше false.
 
 function task5() {
-  const arr = []; // <- ваш масив (має містити число 10)
-
-  // ваш код перебору тут
-  // повертає true якщо знайдено 10, інакше false
+	const arr = [1, 5, 10, 20, 30]; // <- ваш масив (має містити число 10)
+	return arr.includes(10);
 }
 
 
